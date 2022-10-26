@@ -16,7 +16,7 @@ const App=()=> {
   useEffect (()=>{
 
       dispatch(getPosts());
-  },[dispatch]);
+  },[currentId, dispatch]);
 
 return(
   <Container maxWidth = "lg">
@@ -32,7 +32,7 @@ return(
 
           </Grid>
           <Grid item xs={12} sm={4}>
-            <Form currentId={currentId}/>
+            <Form currentId={currentId} setCurrentId={setCurrentId}/>
             
           </Grid>
         </Grid>
