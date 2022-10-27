@@ -1,7 +1,10 @@
 export default(posts=[{tags:[]}],action) =>{
 
     switch (action.type){
+        case 'DELETE':
+            return posts.filter((post)=> post._id !== action.payload );
         case 'UPDATE':
+        case 'Like':
             return posts.map ((post)=> post._id ===action.payload._id ? action.payload:post);
         case 'FETCH_All':
             return action.payload;
