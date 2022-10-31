@@ -52,7 +52,7 @@ const Form =({currentId,setCurrentId})=>{
                 <TextField name ="tags" variant="outlined" label="Tags" fullWidth value={postData.tags}onChange={(e)=>setPostData({...postData,tags:e.target.value.split(',')})}/>
                  <div className={classes.fileInput}>
                 <FileBase type= "file" multiple={false} onDone={(based64)=>setPostData({...postData,selectedFile:based64})}/>
-                <Button className={classes.buttonSubmit} variant='container' color='primary' size="large" type="submit"fullWidth>Submit</Button>
+                <Button className={classes.buttonSubmit} variant='contained' color='primary' size="large" type="submit"fullWidth>Submit</Button>
                 <Button variant='contained' color='secondary' size="small" onClick={clear}fullWidth>clear</Button>
             </div>
 

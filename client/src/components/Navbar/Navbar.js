@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 
 const Navbar = () => {
     const classes = useStyles();
-    const {user,setUser} = useState(JSON.parse(localStorage.getItem('profile')));
+    const [user,setUser] = useState(JSON.parse(localStorage.getItem('profile')));
     console.log(user);
 
     useEffect(()=>{
